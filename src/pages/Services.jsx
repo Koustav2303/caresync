@@ -197,12 +197,15 @@ const Services = () => {
                     <img src={program.image} alt={program.name} className="w-full h-full object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"></div>
                     
-                    <div className="absolute bottom-0 left-0 w-full p-8 md:p-12 text-white">
-                      <h3 className="text-3xl md:text-4xl font-heading font-bold mb-4">{program.name}</h3>
+                    <div className="absolute bottom-0 left-0 w-full p-8 md:p-12 text-left">
+                      {/* EXPLICIT text-white FIX ON HEADING */}
+                      <h3 className="text-white text-3xl md:text-4xl font-heading font-bold mb-4">{program.name}</h3>
                       <p className="text-gray-200 text-lg max-w-2xl mb-8 leading-relaxed">{program.desc}</p>
-                      <Button variant="primary" className="bg-white text-gray-900 hover:bg-gray-100 border-none shadow-lg">
+                      
+                      {/* EXPLICIT NATIVE BUTTON FIX */}
+                      <button className="px-6 py-3 bg-white text-primary-900 font-bold rounded-xl shadow-lg hover:bg-gray-100 transition-colors">
                         Enroll in Program
-                      </Button>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -261,14 +264,16 @@ const Services = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link to="/doctors">
-              <Button size="lg" className="w-full sm:w-auto bg-white text-primary-900 hover:bg-gray-50 border-none px-8 py-4 rounded-xl shadow-2xl">
+              {/* EXPLICIT NATIVE BUTTON FIX */}
+              <button className="flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-white text-primary-900 font-bold rounded-xl hover:bg-gray-50 transition-all shadow-2xl">
                 <Calendar size={20} className="mr-2" /> Book an Appointment
-              </Button>
+              </button>
             </Link>
             <Link to="/auth/signup">
-              <Button variant="outline" size="lg" className="w-full sm:w-auto text-white border-white/30 hover:bg-white/10 px-8 py-4 rounded-xl">
+              {/* EXPLICIT NATIVE BUTTON FIX */}
+              <button className="w-full sm:w-auto px-8 py-4 bg-transparent text-white font-bold rounded-xl border border-white/30 hover:bg-white/10 transition-all">
                 Create Patient Account
-              </Button>
+              </button>
             </Link>
           </div>
         </div>
