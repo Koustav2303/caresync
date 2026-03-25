@@ -69,8 +69,8 @@ const Footer = () => {
         
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-gray-800 text-sm text-center text-gray-500 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p>&copy; {new Date().getFullYear()} CareSync. All rights reserved.</p>
-          <p>Designed with ❤️ for a better healthcare experience.Coded by Koustav </p>
+          <p>&copy; {new Date().getFullYear()} CareSync. All rights reserved by Koustav.</p>
+          <p>Designed with ❤️ for a better healthcare experience.</p>
         </div>
       </div>
     </footer>
